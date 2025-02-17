@@ -1,0 +1,25 @@
+{
+  "name": "mini-stock",
+  "version": "1.0.0",
+  "description": "An mini API for product and categories management",
+  "keywords": [
+    "api",
+    "products",
+    "categories"
+  ],
+  "homepage": "https://github.com/DrBooleani/mini-stock-demo#readme",
+  "bugs": {
+    "url": "https://github.com/DrBooleani/mini-stock-demo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrBooleani/mini-stock-demo.git"
+  },
+  "license": "MIT",
+  "author": "DrBooleani",
+  "type": "commonjs",
+  "main": "src/server.ts",
+  "scripts": {
+    
+  }
+}
