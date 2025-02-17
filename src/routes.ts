@@ -8,5 +8,6 @@ const userController = new UserController();
 router.get("", new WelcomeController().handle);
 
 /* Usuários */
-router.post('/user', userController.createUser)
+router.post('/user', userController.createUser);
+router.post('/auth', userController.authUser);
 export default router;
