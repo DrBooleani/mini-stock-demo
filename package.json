@@ -19,7 +19,9 @@
   "author": "DrBooleani",
   "main": "src/server.ts",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only src/server.ts"
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev --transpile-only src/server.ts",
+    "build": "npx prisma generate && npx tsc && npx prisma generate"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
