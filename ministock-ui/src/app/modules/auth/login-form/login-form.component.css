@@ -1,0 +1,13 @@
+.grid {
+  background: url("https://raw.githubusercontent.com/deyvidsalvatore/Mini-Stock-Control/refs/heads/ui/feat/103-Login-Layout/ministock-ui/src/assets/buildings-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vmin;
+}
+
+@media screen and (min-width: 1400px) {
+  .grid {
+    background-position: top;
+  }
+}

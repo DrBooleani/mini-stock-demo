@@ -8,6 +8,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { PrimengModule } from "./shared/primeng/primeng.module";
 import { FormsModule } from "@angular/forms";
+import { provideHttpClient } from "@angular/common/http";
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +20,7 @@ import { FormsModule } from "@angular/forms";
         preset: Lara,
       },
     }),
+    provideHttpClient()
   ],
   bootstrap: [AppComponent],
 })

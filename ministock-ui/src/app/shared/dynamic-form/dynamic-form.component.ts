@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, inject, Input, OnInit, Output } from '@angular/core';
 import { DynamicFormQuestionComponent } from './dynamic-form-question/dynamic-form-question.component';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
@@ -23,6 +23,7 @@ export class DynamicFormComponent implements OnInit {
   payLoad = '';
   myQcs = inject(QuestionControlService);
   messageService = inject(MessageService);
+  @Output() formSubmitted = new EventEmitter<any>();
 
   ngOnInit(): void {
     this.form = this.myQcs.toFormGroup(this.questions as QuestionBase<string>[]);
@@ -30,8 +31,9 @@ export class DynamicFormComponent implements OnInit {
 
   onSubmit() {
     if (this.form.valid) {
-      this.payLoad = JSON.stringify(this.form.getRawValue());
+      this.formSubmitted.emit(this.form.getRawValue());
       this.showSuccessToast("Data was saved successfully!");
+      this.form.reset();
     } else {
       this.showErrorToast("An error happened, check the fields!");
     }
