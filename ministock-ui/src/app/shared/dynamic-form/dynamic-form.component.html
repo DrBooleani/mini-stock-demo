@@ -1,0 +1,23 @@
+<div>
+  <p-toast></p-toast>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    @for (question of questions; track question) {
+      <div class="form-row">
+        <app-dynamic-form-question [question]="question" [form]="form"></app-dynamic-form-question>
+      </div>
+    }
+
+    <div class="form-row myButton">
+      <button
+        pButton
+        type="submit"
+        label="Send"
+        [disabled]="form.invalid"
+        icon="pi pi-check"
+        class="p-button-primary"
+      >
+      </button>
+    </div>
+
+  </form>
+</div>

@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { provideAnimationsAsync } from "@angular/platform-browser/animations/async";
 import { providePrimeNG } from "primeng/config";
-import Aura from '@primeng/themes/aura';
+import Lara from '@primeng/themes/lara';
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -16,7 +16,7 @@ import { FormsModule } from "@angular/forms";
     provideAnimationsAsync(),
     providePrimeNG({
       theme: {
-        preset: Aura,
+        preset: Lara,
       },
     }),
   ],
